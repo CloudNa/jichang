@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>守护生命 - 动物保护行动</title>
+    <style>
+        /* 基础样式 */
+        :root {
+            --primary-color: #2d5a27;
+            --accent-color: #f1c40f;
+            --text-light: #ffffff;
+            --text-dark: #333;
+            --bg-light: #f4f7f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        /* 导航栏 */
+        header {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* 英雄横幅区 */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1546182990-dffeafbe841d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+        }
+
+        /* 核心内容区 */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        /* 卡片布局 */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        /* 行动呼吁 */
+        .cta {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            margin-top: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #333;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: opacity 0.3s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            header { flex-direction: column; }
+            nav { margin-top: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">🐾 生命守望者</div>
+        <nav>
+            <a href="#about">关于我们</a>
+            <a href="#threats">生存威胁</a>
+            <a href="#action">参与行动</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>每一个生命都值得被尊重</h1>
+        <p>地球不仅是人类的家园，也是数百万种奇妙生物的栖息地。加入我们，保护那些无法为自己发声的生命。</p>
+        <a href="#action" class="btn">立即加入</a>
+    </section>
+
+    <div class="container" id="about">
+        <div class="section-title">
+            <h2>为什么保护动物至关重要？</h2>
+            <p>生物多样性是维持地球生态系统平衡的基石。</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>生态平衡</h3>
+                <p>每种动物在食物链中都扮演着关键角色。一个物种的灭绝可能会导致整个生态系统的连锁崩塌。</p>
+            </div>
+            <div class="card">
+                <h3>科学价值</h3>
+                <p>动物为人类的医学研究、仿生学和遗传学提供了无尽的启示和可能性。</p>
+            </div>
+            <div class="card">
+                <h3>道德责任</h3>
+                <p>作为地球上拥有最强能力的物种，我们有责任保护其他生命，维护自然的完整性。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="threats">
+        <div class="section-title">
+            <h2>它们正面临的威胁</h2>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <h3>栖息地丧失</h3>
+                <p>城市扩张和森林砍伐让野生动物失去了赖以生存的家园。</p>
+            </div>
+            <div class="card">
+                <h3>非法贸易</h3>
+                <p>盗猎和非法野生动物贸易依然是许多濒危物种最大的威胁。</p>
+            </div>
+            <div class="card">
+                <h3>气候变化</h3>
+                <p>全球变暖导致冰川融化、海水升温，改变了动物们的生存环境。</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta" id="action">
+        <h2>准备好做出改变了吗？</h2>
+        <p>无论是个人的微小努力，还是集体的共同发声，都能为动物创造更好的明天。</p>
+        <p>拒绝象牙制品 | 减少塑料使用 | 保护自然水源 | 支持动物救助站</p>
+        <a href="mailto:contact@example.com" class="btn">联系我们了解更多</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 动物保护公益组织 | 保护自然，就是保护我们自己</p>
+    </footer>
+
+</body>
+</html>
